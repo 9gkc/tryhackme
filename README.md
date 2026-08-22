@@ -24,6 +24,7 @@
 | 16 | [Corp Website](https://tryhackme.com/room/lafb2026e7) | React2Shell RCE, command execution as daniel, and sudo-based privilege escalation. | **Officially completed** | [README](rooms/16-corp-website/README.md) · [Solution](rooms/16-corp-website/solution.md) · [Notes](rooms/16-corp-website/notes.md) |
 | 17 | [When Hearts Collide](https://tryhackme.com/room/lafb2026e1) | MD5 collision abuse in a web application that matches uploaded images to dogs. | **Officially completed** | [README](rooms/17-when-hearts-collide/README.md) · [Solution](rooms/17-when-hearts-collide/solution.md) · [Notes](rooms/17-when-hearts-collide/notes.md) |
 | 18 | [Signed Messages](https://tryhackme.com/room/lafb2026e8) | Predictable RSA key derivation, signature forgery, and trust-model failure. | **Officially completed** | [README](rooms/18-signed-messages/README.md) · [Solution](rooms/18-signed-messages/solution.md) · [Notes](rooms/18-signed-messages/notes.md) |
+| 19 | [TryHack3M: Bricks Heist](https://tryhackme.com/room/tryhack3mbricksheist) | WordPress RCE, miner persistence, wallet attribution, and incident analysis. | **Officially completed** | [README](rooms/19-bricks-heist/README.md) · [Solution](rooms/19-bricks-heist/solution.md) · [Notes](rooms/19-bricks-heist/notes.md) |
 
 ## منهجية التوثيق
 
