@@ -1,39 +1,76 @@
-# TryHackMe — Verified Room Write-ups
+# TryHackMe | Verified Write-ups
 
-هذا المستودع يوثق غرف TryHackMe التي تم حلها داخل المتصفح المصرح به، مع الحفاظ على تسلسل واضح بين فهم السيناريو، والتحليل، والخطوات العملية، والإجابة النهائية، ثم دليل التحقق الرسمي داخل المنصة. جميع المحتويات مخصصة للتدريب داخل مختبرات TryHackMe المصرح بها فقط.
+مستودع منظم لتوثيق غرف **TryHackMe** التي تم حلها والتحقق من إجاباتها داخل المختبر المصرح به. صُمم كل توثيق ليقود القارئ من فهم السيناريو إلى التحليل، ثم خطوات الحل، والإجابات النهائية، والدروس الأمنية، في **ملف Markdown واحد لكل غرفة**.
 
-## الفهرس
+> **نطاق الاستخدام:** التدريب داخل مختبرات TryHackMe المصرح بها فقط.
 
-| # | الغرفة | المجال | الحالة | الملف الوحيد |
-|---|---|---|---|---|
-| 01 | [Senior Security Analyst Intro](https://tryhackme.com/room/seniorsecanalystintro) | SOC analyst mindset, escalation, and attacker thinking. | **Officially completed** | [Write-up](rooms/01-senior-security-analyst-intro/README.md) |
-| 02 | [SOC L2 Alert Triage](https://tryhackme.com/room/socl2alerttriage) | L2 alert triage, timelines, containment, and escalation. | **Officially completed** | [Write-up](rooms/02-soc-l2-alert-triage/README.md) |
-| 03 | [Report Writing for SOC L2](https://tryhackme.com/room/reportwritingsocl2) | Executive summaries, DFIR handovers, and responsible AI use. | **Officially completed** | [Write-up](rooms/03-report-writing-for-soc-l2/README.md) |
-| 04 | [Defensive Security Trends](https://tryhackme.com/room/defensivesecuritytrends) | Modern defensive security practices and evolving defender capabilities. | **Officially completed** | [Write-up](rooms/04-defensive-security-trends/README.md) |
-| 05 | [Splunk: Exploring SPL](https://tryhackme.com/room/splunkexploringspl) | Search Processing Language, filtering, fields, and aggregation. | **Officially completed** | [Write-up](rooms/05-splunk-exploring-spl/README.md) |
-| 06 | [Monitoring Active Directory](https://tryhackme.com/room/monitoringactivedirectory) | Identity monitoring, authentication anomalies, and privilege changes. | **Officially completed** | [Write-up](rooms/06-monitoring-active-directory/README.md) |
-| 07 | [M365 Monitoring Basics](https://tryhackme.com/room/m365monitoringbasics) | Microsoft 365 audit activity, identity events, and SIEM monitoring. | **Officially completed** | [Write-up](rooms/07-m365-monitoring-basics/README.md) |
-| 08 | [Entra ID Monitoring](https://tryhackme.com/room/entraidmonitoring) | Entra ID sign-ins, audit logs, privilege changes, and identity detections. | **Officially completed** | [Write-up](rooms/08-entra-id-monitoring/README.md) |
-| 09 | [Cloud Security Pitfalls](https://tryhackme.com/room/cloudsecuritypitfalls) | Cloud workload protection, runtime visibility, and migration risks. | **Officially completed** | [Write-up](rooms/09-cloud-security-pitfalls/README.md) |
-| 10 | [Threat Hunting: Introduction](https://tryhackme.com/room/threathuntingintroduction) | Hypothesis-driven hunting, telemetry, behavior testing, and detection improvement. | **Officially completed** | [Write-up](rooms/10-threat-hunting-introduction/README.md) |
-| 11 | [Volt Typhoon](https://tryhackme.com/room/volttyphoon) | Threat actor tradecraft and stealthy critical-infrastructure intrusion activity. | **Officially completed** | [Write-up](rooms/11-volt-typhoon/README.md) |
-| 12 | [Fools Mate, Revenge](https://tryhackme.com/room/foolsm8v2) | Prototype pollution in a chess application and server-side state abuse. | **Officially completed** | [Write-up](rooms/12-fools-mate-revenge/README.md) |
-| 13 | [ContAInment](https://tryhackme.com/room/containment) | Ransomware response, PCAP investigation, recovery, and evidence validation. | **Officially completed** | [Write-up](rooms/13-containment/README.md) |
-| 14 | [Valenfind](https://tryhackme.com/room/lafb2026e10) | Local file inclusion, source discovery, secrets, and database extraction. | **Officially completed** | [Write-up](rooms/14-valenfind/README.md) |
-| 15 | [Fools Mate](https://tryhackme.com/room/foolsmate) | Client-side validation bypass and direct manipulation of a backend move API. | **Officially completed** | [Write-up](rooms/15-fools-mate/README.md) |
-| 16 | [Corp Website](https://tryhackme.com/room/lafb2026e7) | React2Shell RCE, command execution as daniel, and sudo-based privilege escalation. | **Officially completed** | [Write-up](rooms/16-corp-website/README.md) |
-| 17 | [When Hearts Collide](https://tryhackme.com/room/lafb2026e1) | MD5 collision abuse in a web application that matches uploaded images to dogs. | **Officially completed** | [Write-up](rooms/17-when-hearts-collide/README.md) |
-| 18 | [Signed Messages](https://tryhackme.com/room/lafb2026e8) | Predictable RSA key derivation, signature forgery, and trust-model failure. | **Officially completed** | [Write-up](rooms/18-signed-messages/README.md) |
-| 19 | [TryHack3M: Bricks Heist](https://tryhackme.com/room/tryhack3mbricksheist) | WordPress RCE, miner persistence, wallet attribution, and incident analysis. | **Officially completed** | [Write-up](rooms/19-bricks-heist/README.md) |
+## نظرة سريعة
 
-## منهجية التوثيق
+| المؤشر | الحالة |
+|---|---|
+| الغرف الموثقة | **19 غرفة** |
+| حالة الإجابات | **متحققة رسمياً داخل TryHackMe** |
+| ملفات الغرف | **ملف واحد لكل غرفة** |
+| التقييمات | لا يتم إرسالها ضمن سير العمل |
+| حالة المستودع | **Private** |
 
-كل غرفة موجودة داخل مجلد مستقل مرقّم للحفاظ على ترتيب الإنجاز وسهولة القراءة. يبدأ ملف `README.md` واحداً يجمع الملخص والحل المتسلسل والأجوبة والأدلة والدروس والمراجع. لا تُضاف الغرفة إلى الفهرس إلا بعد ظهور الإجابة الصحيحة أو حالة الإكمال الرسمية داخل TryHackMe وفق ما تم توثيقه.
+## تنقل سريع
 
-## سير العمل للغرف القادمة
+| القسم | الوصف |
+|---|---|
+| [الغرف المكتملة](#الغرف-المكتملة) | الفهرس الكامل مرتباً حسب تسلسل الإنجاز |
+| [الغرف قيد التحقق](docs/unverified-rooms.md) | غرف لا تُدرج ضمن المكتملة حتى يثبت إكمالها |
+| [منهجية الكتابة](docs/workflow.md) | القواعد المعتمدة لإضافة الغرف الجديدة |
 
-عند حل غرفة جديدة، تُضاف بعد التحقق الرسمي إلى مجلد مستقل يحتوي ملف `README.md` واحداً يجمع معلومات الغرفة، الهدف، التحليل، خطوات الحل، الإجابات، دليل التحقق، الدروس الأمنية، والمراجع. الغرف التي لم يثبت إكمالها رسمياً تبقى خارج الفهرس إلى أن تكتمل.
+## الغرف المكتملة
 
-## ملاحظة الخصوصية
+### 01–10 | SOC والدفاع والمراقبة
 
-المستودع منشأ كـ **Private repository**. لا تُضاف إليه بيانات الحسابات أو الرموز السرية أو معلومات خارج نطاق المختبر، وتُستخدم عناوين IP المؤقتة فقط عندما تكون جزءاً من شرح المختبر.
+| # | الغرفة | المحور | التوثيق |
+|---:|---|---|---|
+| 01 | [Senior Security Analyst Intro](https://tryhackme.com/room/seniorsecanalystintro) | عقلية محلل SOC والتصعيد والتفكير الهجومي | [فتح الملف](rooms/01-senior-security-analyst-intro/README.md) |
+| 02 | [SOC L2 Alert Triage](https://tryhackme.com/room/socl2alerttriage) | فرز التنبيهات، بناء الخط الزمني، والاحتواء | [فتح الملف](rooms/02-soc-l2-alert-triage/README.md) |
+| 03 | [Report Writing for SOC L2](https://tryhackme.com/room/reportwritingsocl2) | كتابة الملخصات التنفيذية وتسليمات DFIR | [فتح الملف](rooms/03-report-writing-for-soc-l2/README.md) |
+| 04 | [Defensive Security Trends](https://tryhackme.com/room/defensivesecuritytrends) | اتجاهات الدفاع الأمني وسلسلة التوريد والذكاء الاصطناعي | [فتح الملف](rooms/04-defensive-security-trends/README.md) |
+| 05 | [Splunk: Exploring SPL](https://tryhackme.com/room/splunkexploringspl) | البحث في السجلات باستخدام SPL | [فتح الملف](rooms/05-splunk-exploring-spl/README.md) |
+| 06 | [Monitoring Active Directory](https://tryhackme.com/room/monitoringactivedirectory) | مراقبة الهوية والمصادقة وتغييرات الصلاحيات | [فتح الملف](rooms/06-monitoring-active-directory/README.md) |
+| 07 | [M365 Monitoring Basics](https://tryhackme.com/room/m365monitoringbasics) | مراقبة سجلات Microsoft 365 والهوية | [فتح الملف](rooms/07-m365-monitoring-basics/README.md) |
+| 08 | [Entra ID Monitoring](https://tryhackme.com/room/entraidmonitoring) | مراقبة تسجيلات الدخول وسجلات Entra ID | [فتح الملف](rooms/08-entra-id-monitoring/README.md) |
+| 09 | [Cloud Security Pitfalls](https://tryhackme.com/room/cloudsecuritypitfalls) | مخاطر حماية البيئات السحابية والهجرة | [فتح الملف](rooms/09-cloud-security-pitfalls/README.md) |
+| 10 | [Threat Hunting: Introduction](https://tryhackme.com/room/threathuntingintroduction) | الصيد المبني على الفرضيات وتحسين الاكتشاف | [فتح الملف](rooms/10-threat-hunting-introduction/README.md) |
+
+### 11–19 | استخبارات التهديدات، الويب، والاستجابة للحوادث
+
+| # | الغرفة | المحور | التوثيق |
+|---:|---|---|---|
+| 11 | [Volt Typhoon](https://tryhackme.com/room/volttyphoon) | تحليل أساليب فاعل تهديد يستهدف البنية التحتية | [فتح الملف](rooms/11-volt-typhoon/README.md) |
+| 12 | [Fools Mate, Revenge](https://tryhackme.com/room/foolsm8v2) | Prototype Pollution وتجاوز منطق تطبيق الشطرنج | [فتح الملف](rooms/12-fools-mate-revenge/README.md) |
+| 13 | [ContAInment](https://tryhackme.com/room/containment) | تحليل PCAP والاستجابة لبرمجية الفدية | [فتح الملف](rooms/13-containment/README.md) |
+| 14 | [Valenfind](https://tryhackme.com/room/lafb2026e10) | LFI، قراءة المصدر، واستخراج قاعدة البيانات | [فتح الملف](rooms/14-valenfind/README.md) |
+| 15 | [Fools Mate](https://tryhackme.com/room/foolsmate) | تجاوز التحقق من جهة العميل والتلاعب بواجهة API | [فتح الملف](rooms/15-fools-mate/README.md) |
+| 16 | [Corp Website](https://tryhackme.com/room/lafb2026e7) | React2Shell وRCE ثم التصعيد عبر sudo | [فتح الملف](rooms/16-corp-website/README.md) |
+| 17 | [When Hearts Collide](https://tryhackme.com/room/lafb2026e1) | استغلال تصادمات MD5 في تطبيق ويب | [فتح الملف](rooms/17-when-hearts-collide/README.md) |
+| 18 | [Signed Messages](https://tryhackme.com/room/lafb2026e8) | اشتقاق مفاتيح RSA القابلة للتنبؤ وتزوير التوقيع | [فتح الملف](rooms/18-signed-messages/README.md) |
+| 19 | [TryHack3M: Bricks Heist](https://tryhackme.com/room/tryhack3mbricksheist) | WordPress RCE وتحليل عامل التعدين وربط المحفظة | [فتح الملف](rooms/19-bricks-heist/README.md) |
+
+## بنية كل غرفة
+
+```text
+rooms/
+└── NN-room-name/
+    └── README.md
+```
+
+يجمع ملف الغرفة الواحد معلومات البيئة، ووصف الهدف، والتحليل، والخطوات العملية، والإجابات، والأعلام، ونتيجة التحقق الرسمي، والاستنتاجات الأمنية، والمراجع. لا توجد ملفات `solution.md` أو `notes.md` منفصلة.
+
+## معيار الإكمال
+
+لا تُدرج الغرفة في الفهرس إلا بعد قبول الإجابات داخل TryHackMe وظهور حالة الإكمال أو ما يثبت اكتمال المهمة رسمياً. لا يتم إرسال تقييم الغرفة، ولا تُعرض الغرف الجزئية على أنها مكتملة.
+
+## إضافة الغرف القادمة
+
+تُضاف كل غرفة جديدة برقم تسلسلي ومجلد مستقل وملف `README.md` واحد. يبدأ التوثيق بالهدف، ثم يشرح الملاحظة التي قادت إلى الخطوة التالية، وينتهي بالإجابات المتحققة والدروس الأمنية والمراجع المناسبة.
+
+## الخصوصية
+
+المستودع **Private**. لا تُضاف إليه بيانات الحسابات أو الرموز السرية أو المعلومات الشخصية. تُذكر عناوين IP المؤقتة فقط عندما تكون جزءاً من سياق المختبر، وتبقى جميع الخطوات ضمن نطاق TryHackMe المصرح به.

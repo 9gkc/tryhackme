@@ -1,17 +1,21 @@
-# Repository Workflow
+# منهجية مستودع TryHackMe
 
-## Structure
+## هيكل الغرفة
 
-Each completed room receives one numbered directory under `rooms/`. The directory contains exactly one `README.md` that combines the reader-friendly overview, the complete solution, verified answers, evidence, lessons, and references.
+تحصل كل غرفة مكتملة على مجلد مستقل مرقّم داخل `rooms/`. يحتوي المجلد على ملف `README.md` واحد فقط، ويجمع هذا الملف الملخص، والتحليل، والحل الكامل، والأجوبة المتحققة، والأدلة، والدروس الأمنية، والمراجع.
 
-## Completion policy
+## ترتيب الإضافة
 
-A room is listed as completed only when the answer has been accepted by TryHackMe and the room displays its completion state. Evaluation submissions are not part of the workflow unless the user explicitly changes that preference.
+تُضاف الغرف بالترتيب التسلسلي نفسه الظاهر في الفهرس الرئيسي. يحافظ اسم المجلد على رقم الغرفة واسمها المختصر، بينما يبقى اسم الملف ثابتاً باسم `README.md` حتى تكون قراءة المستودع من واجهة GitHub مباشرة وسهلة.
 
-## Writing standard
+## معيار الإكمال
 
-The documentation should explain the objective before the commands, connect each observation to the next decision, preserve exact answer formatting, and close with defensive lessons and references. Reproduction is limited to the authorized TryHackMe lab.
+لا تُدرج الغرفة ضمن الفهرس إلا بعد قبول الإجابات داخل TryHackMe وظهور حالة الإكمال أو ما يثبت اكتمال المهمة رسمياً. لا تُرسل تقييمات الغرف، ولا تُخلط الغرف الجزئية مع الغرف المكتملة.
 
-## Future additions
+## معيار الكتابة
 
-New rooms should be numbered sequentially and use the same single-file structure. Unconfirmed or partially completed rooms should remain in a separate local working area and must not be presented as completed write-ups.
+يبدأ التوثيق بشرح الهدف والسياق، ثم يربط كل ملاحظة بالقرار أو الخطوة التالية. تُحفظ صيغ الأجوبة والأعلام كما قبلتها المنصة، ويُختتم الملف بالدروس الأمنية والمراجع ذات الصلة. تقتصر إعادة الإنتاج على مختبر TryHackMe المصرح به.
+
+## الغرف قيد التحقق
+
+تُحفظ الغرف التي لم يثبت إكمالها رسمياً في [سجل الغرف قيد التحقق](unverified-rooms.md)، ولا تُضاف إلى مجلد `rooms/` أو إلى الفهرس الرئيسي قبل التحقق.
