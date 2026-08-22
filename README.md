@@ -23,6 +23,7 @@
 | 15 | [Fools Mate](https://tryhackme.com/room/foolsmate) | Client-side validation bypass and direct manipulation of a backend move API. | **Officially completed** | [README](rooms/15-fools-mate/README.md) · [Solution](rooms/15-fools-mate/solution.md) · [Notes](rooms/15-fools-mate/notes.md) |
 | 16 | [Corp Website](https://tryhackme.com/room/lafb2026e7) | React2Shell RCE, command execution as daniel, and sudo-based privilege escalation. | **Officially completed** | [README](rooms/16-corp-website/README.md) · [Solution](rooms/16-corp-website/solution.md) · [Notes](rooms/16-corp-website/notes.md) |
 | 17 | [When Hearts Collide](https://tryhackme.com/room/lafb2026e1) | MD5 collision abuse in a web application that matches uploaded images to dogs. | **Officially completed** | [README](rooms/17-when-hearts-collide/README.md) · [Solution](rooms/17-when-hearts-collide/solution.md) · [Notes](rooms/17-when-hearts-collide/notes.md) |
+| 18 | [Signed Messages](https://tryhackme.com/room/lafb2026e8) | Predictable RSA key derivation, signature forgery, and trust-model failure. | **Officially completed** | [README](rooms/18-signed-messages/README.md) · [Solution](rooms/18-signed-messages/solution.md) · [Notes](rooms/18-signed-messages/notes.md) |
 
 ## منهجية التوثيق
 
