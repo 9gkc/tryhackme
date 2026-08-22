@@ -8,7 +8,7 @@
 
 | المؤشر | الحالة |
 |---|---|
-| الغرف الموثقة | **19 غرفة** |
+| الغرف الموثقة | **20 غرفة** |
 | حالة الإجابات | **متحققة رسمياً داخل TryHackMe** |
 | ملفات الغرف | **ملف واحد لكل غرفة** |
 | التقييمات | لا يتم إرسالها ضمن سير العمل |
@@ -39,7 +39,7 @@
 | 09 | [Cloud Security Pitfalls](https://tryhackme.com/room/cloudsecuritypitfalls) | مخاطر حماية البيئات السحابية والهجرة | [فتح الملف](rooms/09-cloud-security-pitfalls/README.md) |
 | 10 | [Threat Hunting: Introduction](https://tryhackme.com/room/threathuntingintroduction) | الصيد المبني على الفرضيات وتحسين الاكتشاف | [فتح الملف](rooms/10-threat-hunting-introduction/README.md) |
 
-### 11–19 | استخبارات التهديدات، الويب، والاستجابة للحوادث
+### 11–20 | استخبارات التهديدات، الويب، والاستجابة للحوادث
 
 | # | الغرفة | المحور | التوثيق |
 |---:|---|---|---|
@@ -52,6 +52,7 @@
 | 17 | [When Hearts Collide](https://tryhackme.com/room/lafb2026e1) | استغلال تصادمات MD5 في تطبيق ويب | [فتح الملف](rooms/17-when-hearts-collide/README.md) |
 | 18 | [Signed Messages](https://tryhackme.com/room/lafb2026e8) | اشتقاق مفاتيح RSA القابلة للتنبؤ وتزوير التوقيع | [فتح الملف](rooms/18-signed-messages/README.md) |
 | 19 | [TryHack3M: Bricks Heist](https://tryhackme.com/room/tryhack3mbricksheist) | WordPress RCE وتحليل عامل التعدين وربط المحفظة | [فتح الملف](rooms/19-bricks-heist/README.md) |
+| 20 | [Extracted](https://tryhackme.com/room/extractedroom) | تحليل PCAP، تفريغ ذاكرة KeePass، واستعادة قاعدة بيانات مسروقة | [فتح الملف](rooms/20-extracted/README.md) |
 
 ## بنية كل غرفة
 
