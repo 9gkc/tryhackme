@@ -1,33 +1,46 @@
-# الحل النهائي لغرفة Report Writing for SOC L2
+# Report Writing for SOC L2 — TryHackMe
 
-الرابط: [TryHackMe — Report Writing for SOC L2](https://tryhackme.com/room/reportwritingsocl2)
+> **الحالة:** تم إكمال الغرفة بنجاح؛ ظهرت داخل الواجهة العبارة Room completed: 100%، وتم اعتماد جميع الإجابات والأعلام. لم يُرسل تقييم الغرفة.
 
-## الحالة النهائية
+## بطاقة الغرفة
 
-تم إكمال الغرفة بنجاح، وظهرت في المتصفح العبارة **Room completed: 100%**.
+| الحقل | القيمة |
+|---|---|
+| الرابط | https://tryhackme.com/room/reportwritingsocl2 |
+| التصنيف/المجال | غير مذكور |
+| الصعوبة | غير مذكور |
+| المدة | غير مذكور |
+| المختبر/التطبيق التفاعلي | https://static-labs.tryhackme.cloud/apps/soc-l2-report-dfir/ |
 
-## الإجابات حسب المهام
+## الملخص التنفيذي
 
-| المهمة | السؤال أو المطلوب | الإجابة الصحيحة | الحالة |
-|---|---|---|---|
-| Task 1 — Introduction | تأكيد بدء الغرفة | لا توجد إجابة نصية؛ تم الضغط على Check | مكتملة |
-| Task 2 — L1 vs L2 Communication | ما المستوى الذي يربط SOC بالعالم الخارجي؟ | `L2` | صحيحة |
-| Task 2 — L1 vs L2 Communication | ماذا يكتب محللو L2 لتلخيص نتائج SOC؟ | `Reports` | صحيحة |
-| Task 3 — Leadership Communication | هل ينبغي إكمال التحليل بعد مشاركة التقرير الأولي؟ | `Yea` | صحيحة |
-| Task 3 — Leadership Communication | هل ينبغي إبقاء الفريق على اطلاع أثناء التواصل المستمر؟ | `Yea` | صحيحة |
-| Task 3 — Leadership Communication | علم التحدي التنفيذي | `THM{executive_summary_approved}` | صحيحة |
-| Task 4 — SOC/DFIR Communication | هل ملاحظات تسليم L2 موجهة لجمهور غير تقني؟ | `Nay` | صحيحة |
-| Task 4 — SOC/DFIR Communication | أي جزء يسرد النتائج بترتيب زمني؟ | `Attack Timeline` | صحيحة |
-| Task 4 — SOC/DFIR Communication | علم تحدي DFIR | `THM{trysaveme_would_be_proud}` | صحيحة |
-| Task 5 — Responsible AI Usage | ماذا ينبغي توفيره في AI prompt للحصول على أفضل التقارير؟ | `Context` | صحيحة |
-| Task 5 — Responsible AI Usage | هل ينبغي الاعتماد الكامل على GenAI في اتخاذ القرارات الحرجة؟ | `Nay` | صحيحة |
-| Task 6 — Conclusion | إكمال الغرفة | لا توجد إجابة مطلوبة؛ تم الضغط على Check | صحيحة |
+تتناول الغرفة Report Writing for SOC L2 مهارات التواصل والتقرير لدى محلل L2 في بيئة SOC، بما يشمل التفريق بين أدوار L1 وL2 في الربط مع العالم الخارجي، وصياغة تواصل قيادي واضح ومهني، وإعداد DFIR handover notes فعّالة ودقيقة زمنياً، إضافة إلى مبادئ الاستخدام المسؤول للذكاء الاصطناعي في كتابة التقارير. [1]
 
-## تصنيفات تحديات التفاعل
+الهدف هو تصنيف العيوب الاتصالية ضمن تحديات تفاعلية، تقديم إجابات مباشرة على أسئلة نظرية، والحصول على أعلام تثبت اجتياز التحديات. تم اعتماد الإجابات كافة، وحُصل على الأعلام المطلوبة كما وردت في واجهة الغرفة.
 
-### تحدي C-Level Communication في Task 3
+## مسار الحل
 
-| النص المظلل | التصنيف |
+### 1. Task 1 — Introduction
+
+- السؤال “Let's go!” لا يتطلب إدخال نصي؛ تم تأكيد المهمة عبر Check.
+- المؤشر المرئي للتقدم بعد الإكمال: 8%.
+
+### 2. Task 2 — L1 vs L2 Communication
+
+- أي مستوى يربط SOC بالعالم الخارجي؟ الإجابة: `L2`.
+- ماذا يكتب محللو L2 لتلخيص نتائج SOC؟ الإجابة: `Reports`.
+- تم التحقق من الإجابتين، وارتفع التقدم إلى 25%.
+
+### 3. Task 3 — Leadership Communication
+
+- التحدي التفاعلي C-Level Communication أُنجز بنتيجة 5/5، وظهر العلم: `THM{executive_summary_approved}`.
+- الإجابات النظرية:
+  - Should you complete the analysis after sharing the initial SOC report? الإجابة: `Yea`.
+  - Should you keep your team informed about the ongoing communication? الإجابة: `Yea`.
+
+تصنيفات الأجزاء المظللة ضمن التحدي كانت كما يلي:
+
+| النص المظلل/العنصر | التصنيف |
 |---|---|
 | الجزء المتعلق بغياب المستلم | `Missing recipient` |
 | الجزء المتعلق بغياب السياق | `Missing context` |
@@ -35,7 +48,13 @@
 | الجدول الزمني غير الواضح | `Unclear timeline` |
 | اللغة غير المهنية | `Unprofessional language` |
 
-### تحدي DFIR Handover Notes في Task 4
+### 4. Task 4 — SOC/DFIR Communication
+
+- Are L2 handover notes meant for a non-technical audience? الإجابة: `Nay`.
+- What part of the handover notes lists your findings chronologically? الإجابة: `Attack Timeline`.
+- التحدي التفاعلي (DFIR handover) عبر التطبيق: https://static-labs.tryhackme.cloud/apps/soc-l2-report-dfir/ نتج عنه العلم: `THM{trysaveme_would_be_proud}`.
+
+تصنيفات الأجزاء المظللة ضمن DFIR كانت كما يلي:
 
 | النص أو العنصر المظلل | التصنيف |
 |---|---|
@@ -45,46 +64,56 @@
 | `was exfiltrated` | `No evidence` |
 | `Other IPs` | `Missing context` |
 
-## الأعلام
+- المؤشر المرئي للتقدم بعد إكمال المهمة: 50%.
 
-- `THM{executive_summary_approved}`
-- `THM{trysaveme_would_be_proud}`
+### 5. Task 5 — Responsible AI Usage
 
-تم تنفيذ الحل داخل بيئة TryHackMe التدريبية المصرح بها ومن خلال حساب المستخدم في المتصفح.
+- What should be provided in the AI prompt to get the best reports? الإجابة: `Context`.
+- Should you fully rely on GenAI for critical decision-making? الإجابة: `Nay`.
+- تم قبول الإجابتين.
 
----
+### 6. Task 6 — Conclusion
 
-## ملاحظات وأدلة مساندة
+- لا تتطلب إدخال نصي؛ تم تأكيد المهمة عبر Check.
+- الحالة النهائية المعروضة: Room completed: 100%.
 
-الرابط: https://tryhackme.com/room/reportwritingsocl2
+## الإجابات النهائية
 
-تم الانضمام إلى الغرفة، وTask 1 مفتوح. السؤال هو `Let's go!` ولا يحتاج إجابة نصية؛ سيتم تأكيده باستخدام Check.
+| المهمة/السؤال | الإجابة المقبولة |
+|---|---|
+| Task 1 — Introduction: تأكيد بدء الغرفة | لا توجد إجابة مطلوبة؛ يُترك الحقل فارغاً |
+| Task 2 — L1 vs L2 Communication: ما المستوى الذي يربط SOC بالعالم الخارجي؟ | `L2` |
+| Task 2 — L1 vs L2 Communication: ماذا يكتب محللو L2 لتلخيص نتائج SOC؟ | `Reports` |
+| Task 3 — Leadership Communication: Should you complete the analysis after sharing the initial SOC report? | `Yea` |
+| Task 3 — Leadership Communication: Should you keep your team informed about the ongoing communication? | `Yea` |
+| Task 3 — Leadership Communication: Flag | `THM{executive_summary_approved}` |
+| Task 4 — SOC/DFIR Communication: Are L2 handover notes meant for a non-technical audience? | `Nay` |
+| Task 4 — SOC/DFIR Communication: What part of the handover notes lists your findings chronologically? | `Attack Timeline` |
+| Task 4 — SOC/DFIR Communication: Flag | `THM{trysaveme_would_be_proud}` |
+| Task 5 — Responsible AI Usage: What should be provided in the AI prompt to get the best reports? | `Context` |
+| Task 5 — Responsible AI Usage: Should you fully rely on GenAI for critical decision-making? | `Nay` |
+| Task 6 — Conclusion: إكمال الغرفة | لا توجد إجابة مطلوبة؛ يُترك الحقل فارغاً |
 
-المهام الظاهرة بعد الانضمام:
-- Task 1: Introduction
-- Task 2: L1 vs L2 Communication
-- Task 3: Leadership Communication — يحتوي تحديًا تفاعليًا عبر View Site.
-- Task 4: SOC/DFIR Communication — يحتوي تحديًا تفاعليًا عبر View Site.
-- Task 5: Responsible AI Usage
-- Task 6: Conclusion
+## التحقق الرسمي داخل TryHackMe
 
-من محتوى الغرفة: L2 يربط SOC بالعالم الخارجي، ويكتب تقارير case summary وMSSP email وDFIR handover notes. قنوات التواصل تشمل voice call للحالات العاجلة، email للتحديثات الأمنية مع CC، ticketing system للعملاء، وcorporate chat للنقاشات الداخلية.
+- مؤشرات مرئية مؤكِّدة:
+  - بعد Task 1: تقدّم 8%.
+  - بعد Task 2: تقدّم 25%.
+  - بعد Task 4: تقدّم 50%.
+  - في نهاية الغرفة: Room completed: 100%.
+- قبول الإجابات:
+  - جميع إجابات المهام التأكيدية والأسئلة النظرية قبلتها المنصة، وظهرت نتيجة 5/5 في تحدي C-Level Communication.
+  - الأعلام ظهرت نصاً داخل التحديات كما يلي: `THM{executive_summary_approved}` و`THM{trysaveme_would_be_proud}`.
+- الإرسال/التقييم:
+  - جميع الإجابات أُرسلت وتم اعتمادها داخل المنصة؛ لا توجد إجابات معلّقة أو غير مُرسلة.
 
-تم إكمال Task 1 بنجاح، وأصبح تقدم الغرفة 8%. محتوى Task 2 يوضح أن L2 هو المستوى الذي يربط SOC بالعالم الخارجي، وأن L2 يكتب reports لتلخيص نتائج SOC. الإجابات المتوقعة: `L2` و`Reports`.
+## الدروس الأمنية
 
-تم التحقق من إجابات Task 2 (`L2` و`Reports`) بنجاح، وأصبح تقدم الغرفة 25%. تبقى Task 3 — Leadership Communication — وهي تتضمن تحديًا تفاعليًا وسؤالين إضافيين.
+- فعالية تقارير L2 تتطلب تحديد الجمهور بدقة، واقتصار النص على ما تدعمه الأدلة، مع سرد زمني واضح للهجمات عبر Attack Timeline، وتجنّب الغموض واللغة غير المهنية.
+- التواصل القيادي يستلزم متابعة التحقيق بعد التقرير الأولي وإبقاء الفريق على اطلاع مستمر، مع توثيق مختصر وواضح قابل للتنفيذ.
+- الاستخدام المسؤول لـ GenAI يعتمد على تزويده بالسياق المناسب والتحقق البشري النهائي، وتجنّب الاعتماد الكامل عليه في القرارات الحرجة.
 
-Task 3 — Leadership Communication يحتوي ثلاثة أسئلة بعد التحدي:
-- Should you complete the analysis after sharing the initial SOC report? (Yea/Nay) — الإجابة المتوقعة `Yea`، لأن التقرير الأولي يبدأ الاحتواء ولا يغني عن استكمال التحقيق.
-- Should you keep your team informed about the ongoing communication? (Yea/Nay) — الإجابة المتوقعة `Yea`.
-- What flag did you receive after completing the task's challenge? — سيُستخرج من التطبيق.
+## المراجع
 
-تم إكمال تحدي C-Level Communication بنتيجة 5/5، وظهر العلم: `THM{executive_summary_approved}`. تصنيفات الأجزاء الخاطئة كانت: Missing recipient، Missing context، Excessive response، Unclear timeline، Unprofessional language.
-
-تم إكمال تحدي C-Level Communication بنتيجة 5/5، وظهر العلم `THM{executive_summary_approved}`. إجابات Task 3 المتوقعة: `Yea` لاستكمال التحليل بعد التقرير الأولي، و`Yea` لإبقاء الفريق على اطلاع أثناء التواصل المستمر.
-
-تم فتح Task 4 — SOC/DFIR Communication — وأصبح تقدم الغرفة 50%. الأسئلة هي: `Are L2 handover notes meant for a non-technical audience? (Yea/Nay)` وإجابتها `Nay`؛ و`What part of the handover notes lists your findings chronologically?` وإجابتها `Attack Timeline`؛ إضافة إلى علم التحدي الذي سيُستخرج من التطبيق.
-
-تطبيق Task 4 المباشر: https://static-labs.tryhackme.cloud/apps/soc-l2-report-dfir/
-
-التصنيفات الصحيحة للأجزاء المظللة في تحدي DFIR هي: `Unnecessary text` للعبارة but given the overall nature of the circumstances surrounding the incident؛ `Ambiguous phrasing` للعبارة OT environment may have been affected in some way؛ `Missing actor` للعبارة was executed؛ `No evidence` للعبارة was exfiltrated؛ و`Missing context` للعنصر Other IPs. العلم الموجود في منطق التطبيق هو `THM{trysaveme_would_be_proud}`.
+[1]: https://tryhackme.com/room/reportwritingsocl2
+[2]: https://static-labs.tryhackme.cloud/apps/soc-l2-report-dfir/

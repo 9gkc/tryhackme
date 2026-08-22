@@ -1,76 +1,92 @@
-# TryHackMe — Monitoring Active Directory
+# Monitoring Active Directory — TryHackMe
 
-رابط الغرفة: https://tryhackme.com/room/monitoringactivedirectory
+> **الحالة:** تم إدخال جميع الإجابات والتحقق منها داخل متصفح الغرفة. ظهرت الحالة النهائية Room completed: 100% مع ظهور مؤشرات Correct Answer لكل الأسئلة، كما تم تشغيل مختبر monitoring-active-directory بنجاح. لم يُرسل تقييم الغرفة.
 
-تم إدخال جميع الإجابات والتحقق منها داخل المتصفح، وظهرت الحالة النهائية **Room completed: 100%**.
+## بطاقة الغرفة
+
+| الحقل | القيمة |
+|---|---|
+| رابط الغرفة | https://tryhackme.com/room/monitoringactivedirectory |
+| التصنيف/المجال | غير مذكور في المسودة |
+| الصعوبة | غير مذكورة في المسودة |
+| المختبر/المدة | المختبر: monitoring-active-directory |
+
+## الملخص التنفيذي
+
+تستهدف غرفة Monitoring Active Directory تمكين محللي الأمن من مراقبة بيئة Active Directory وفهم سجلات المصادقة والأحداث المتعلقة بالحسابات والمجموعات والوصول إلى الموارد. تعتمد المهام على تحليل أحداث Windows Security المهمة مثل 4768 و4769 وتفسير الحقول ذات الصلة ضمن منصة SIEM (مثل Splunk) لبناء خط أساس للنشاط الطبيعي وكشف السلوكيات الشاذة. [1]
+
+يغطي السيناريو التعرف على مصادر بيانات AD، فهم دلالات الحقول مثل Group_Name وLogon Type، والتأكد من إعدادات Audit Policy، ثم تطبيق ذلك عملياً عبر سيناريو انضمام موظف جديد وتتبع إنشاء الحساب وإضافته إلى مجموعة وطلب TGT الأول وعنوان IP المصدر.
+
+## مسار الحل
+
+### 1. مصادر بيانات AD والأحداث الأساسية
+
+- تم تثبيت الفهم الأساس بأن ملف تخزين بيانات اعتماد مستخدمي النطاق على Domain Controller هو NTDS.dit.
+- مصادقة المستخدم المحلي على Domain Controller لا تُسجّل ضمن سياق الدومين وفق إجابة Nay.
+- تحديد Event ID الخاص بطلب تذكرة TGT وهو 4768.
+- إحصاء عدد الحسابات الفريدة التي طلبت TGT في فهرس win عبر كامل الزمن: 14.
+
+### 2. الحسابات والمجموعات وأنماط تسجيل الدخول
+
+- في Splunk، الحقل الذي يعكس اسم المجموعة هو Group_Name.
+- أكثر قيم Logon Type شيوعاً كانت 3، ما يدعم خط الأساس للنشاط التفاعلي/الشبكي الاعتيادي.
+
+### 3. خط الأساس والنشاط الخدمي
+
+- لاحقة حسابات الكمبيوتر في Active Directory تنتهي بـ $ ، ما يسهّل تمييزها.
+- ضمن Event ID 4769 (طلبات TGS)، كانت أكثر خدمة مطلوبة ظاهرة باسم THM-DC$.
+
+### 4. إعدادات التدقيق (Audit Policy)
+
+- استخدمت الأداة المضمنة في Windows للتحقق من سياسات التدقيق الفعّالة:
+
+```
+auditpol /get /category:*
+```
+
+### 5. سيناريو: تدقيق انضمام موظف جديد
+
+- تم تحديد الحساب المنشأ حديثاً باسم nathan.brooks.
+- مُنشئ الحساب هو adm-luke.sullivan.
+- أُضيف الحساب إلى مجموعة Marketing.
+- أول طلب TGT للحساب nathan.brooks جاء من عنوان IP: 10.5.50.12.
 
 ## الإجابات النهائية
 
-| المهمة | السؤال المختصر | الإجابة |
+| المهمة | السؤال | الإجابة المقبولة |
 |---|---|---|
-| Task 1 | Introduction / تشغيل المختبر | لا توجد إجابة نصية؛ تم الضغط على Check |
-| Task 2 | AD Traffic and Logging | لا توجد إجابة نصية؛ تم الضغط على Check |
-| Task 3.1 | ملف تخزين بيانات اعتماد مستخدمي النطاق على Domain Controller | `NTDS.dit` |
-| Task 3.2 | هل تسجل مصادقة المستخدم المحلي على Domain Controller؟ | `Nay` |
-| Task 3.3 | Event ID لطلب TGT | `4768` |
-| Task 3.4 | عدد الحسابات الفريدة التي طلبت TGT في `win` عبر كل الوقت | `14` |
-| Task 4.1 | حقل اسم المجموعة في Splunk | `Group_Name` |
-| Task 4.2 | أكثر Logon Type شيوعًا | `3` |
-| Task 5.1 | لاحقة حسابات الكمبيوتر في Active Directory | `$` |
-| Task 5.2 | أكثر خدمة مطلوبة في Event ID 4769 | `THM-DC$` |
-| Task 6 | أمر عرض جميع إعدادات Audit Policy | `auditpol /get /category:*` |
-| Task 7.1 | اسم الحساب المنشأ حديثًا | `nathan.brooks` |
-| Task 7.2 | منشئ الحساب | `adm-luke.sullivan` |
-| Task 7.3 | المجموعة التي أضيف إليها الحساب | `Marketing` |
-| Task 7.4 | مصدر IP لأول طلب TGT للحساب `nathan.brooks` | `10.5.50.12` |
-| Task 8 | Conclusion | لا توجد إجابة نصية؛ تم الضغط على Check |
+| Task 1 | Introduction / تشغيل المختبر | لا توجد إجابة مطلوبة؛ يُترك الحقل فارغاً |
+| Task 2 | AD Traffic and Logging | لا توجد إجابة مطلوبة؛ يُترك الحقل فارغاً |
+| Task 3.1 | ملف تخزين بيانات اعتماد مستخدمي النطاق على Domain Controller | NTDS.dit |
+| Task 3.2 | هل تسجل مصادقة المستخدم المحلي على Domain Controller؟ | Nay |
+| Task 3.3 | Event ID لطلب TGT | 4768 |
+| Task 3.4 | عدد الحسابات الفريدة التي طلبت TGT في win عبر كل الوقت | 14 |
+| Task 4.1 | حقل اسم المجموعة في Splunk | Group_Name |
+| Task 4.2 | أكثر Logon Type شيوعًا | 3 |
+| Task 5.1 | لاحقة حسابات الكمبيوتر في Active Directory | $ |
+| Task 5.2 | أكثر خدمة مطلوبة في Event ID 4769 | THM-DC$ |
+| Task 6 | أمر عرض جميع إعدادات Audit Policy | auditpol /get /category:* |
+| Task 7.1 | اسم الحساب المنشأ حديثًا | nathan.brooks |
+| Task 7.2 | منشئ الحساب | adm-luke.sullivan |
+| Task 7.3 | المجموعة التي أضيف إليها الحساب | Marketing |
+| Task 7.4 | مصدر IP لأول طلب TGT للحساب nathan.brooks | 10.5.50.12 |
+| Task 8 | Conclusion | لا توجد إجابة مطلوبة؛ يُترك الحقل فارغاً |
 
-## التحقق
+## التحقق الرسمي داخل TryHackMe
 
-ظهرت جميع الإجابات في الغرفة كـ **Correct Answer**، ووصلت نسبة التقدم إلى **100%**. كما تم تشغيل مختبر `monitoring-active-directory` بنجاح.
+- مؤشرات التحقق المرئية داخل المنصة:
+  - ظهور Correct Answer لكل الأسئلة.
+  - نسبة الإكمال Room completed: 100% معروضة في واجهة الغرفة.
+  - المختبر monitoring-active-directory عمل بنجاح أثناء الإجابة.
+- لا توجد ملاحظات حول إرسال تقييم أو درجة؛ اقتصر التحقق على قبول الإجابات داخل المتصفح وظهور حالة الإكمال.
+
+## الدروس الأمنية
+
+- تعزيز مراقبة Active Directory بالتركيز على أحداث Kerberos الأساسية مثل 4768 و4769، وربطها بعناوين IP المصدر وسياق الحساب/الجهاز.
+- استخدام الحقول الدلالية في SIEM مثل Group_Name وLogon Type لبناء خط أساس سلوكي واكتشاف الانحرافات.
+- تمييز حسابات الأجهزة عبر اللاحقة $ وتحليل الخدمات المُستهدفة لتعقب أنماط الوصول.
+- التأكد من اكتمال Audit Policy عبر أدوات النظام مثل auditpol لضمان تسجيل أحداث ذات قيمة تحقيقية.
 
 ## المراجع
 
-[1]: https://medium.com/@walidsalah231911/monitoring-active-directory-thm-5fcfbb0ba782 "Monitoring Active Directory — THM"
-
-[2]: https://josepraveen.medium.com/monitoring-active-directory-tryhackme-splunk-5eca94d95250 "Monitoring Active Directory | TryHackMe | Splunk"
-
----
-
-## ملاحظات وأدلة مساندة
-
-المختبر قيد التشغيل في TryHackMe، وسيتم إدخال الإجابات في المتصفح والتحقق منها.
-
-## الإجابات المؤكدة من شرح الغرفة ومرجعين محدثين
-
-Task 1: لا توجد إجابة نصية؛ تشغيل المختبر ثم Check.
-Task 2: لا توجد إجابة نصية؛ قراءة AD Traffic and Logging ثم Check.
-
-Task 3 Authentication Events:
-- ملف بيانات اعتماد مستخدمي النطاق على DC: `NTDS.dit`
-- مصادقة المستخدم المحلي على workstation تولد أحداثًا على DC؟ `Nay`
-- Event ID لطلب TGT: `4768`
-- عدد الحسابات الفريدة التي طلبت TGT في win عبر كل الوقت: `14`
-
-Task 4 Accounts, Groups and Resource Access Events:
-- الحقل الذي يحتوي اسم المجموعة: `Group_Name`
-- أكثر Logon Type شيوعًا: `3`
-
-Task 5 Understanding Baseline Activity:
-- لاحقة حسابات الكمبيوتر: `$`
-- الخدمة الأكثر طلبًا: `THM-DC$`
-
-Task 6 Audit Policy Configuration:
-- `auditpol /get /category:*`
-
-Task 7 Scenario — New Employee Onboarding Audit:
-- الحساب المنشأ: `nathan.brooks`
-- منشئ الحساب: `adm-luke.sullivan`
-- المجموعة: `Marketing`
-- مصدر IP لأول TGT: `10.5.50.12`
-
-المراجع العامة المقروءة:
-- https://medium.com/@walidsalah231911/monitoring-active-directory-thm-5fcfbb0ba782
-- https://josepraveen.medium.com/monitoring-active-directory-tryhackme-splunk-5eca94d95250
-
-تم التحقق في المتصفح من إكمال Task 3 وTask 4 بنسبة تقدم 50%. إجابات Task 4 الظاهرة كـ Correct Answer هي `Group_Name` و`3`. Task 5 مفتوح، وتظهر أسئلته عن لاحقة حسابات الكمبيوتر والخدمة الأكثر طلبًا؛ الإجابتان المتوقعـتان `$` و`THM-DC$`.
+[1]: https://tryhackme.com/room/monitoringactivedirectory "TryHackMe — Monitoring Active Directory"
