@@ -8,7 +8,7 @@
 
 | المؤشر | الحالة |
 |---|---|
-| الغرف الموثقة | **22 غرفة** |
+| الغرف الموثقة | **23 غرفة** |
 | حالة الإجابات | **متحققة رسمياً داخل TryHackMe** |
 | ملفات الغرف | **ملف واحد لكل غرفة** |
 | التقييمات | لا يتم إرسالها ضمن سير العمل |
@@ -39,7 +39,7 @@
 | 09 | [Cloud Security Pitfalls](https://tryhackme.com/room/cloudsecuritypitfalls) | مخاطر حماية البيئات السحابية والهجرة | [فتح الملف](rooms/09-cloud-security-pitfalls/README.md) |
 | 10 | [Threat Hunting: Introduction](https://tryhackme.com/room/threathuntingintroduction) | الصيد المبني على الفرضيات وتحسين الاكتشاف | [فتح الملف](rooms/10-threat-hunting-introduction/README.md) |
 
-### 11–22 | استخبارات التهديدات، الويب، والاستجابة للحوادث
+### 11–23 | استخبارات التهديدات، الويب، والاستجابة للحوادث
 
 | # | الغرفة | المحور | التوثيق |
 |---:|---|---|---|
@@ -55,6 +55,7 @@
 | 20 | [Extracted](https://tryhackme.com/room/extractedroom) | تحليل PCAP، تفريغ ذاكرة KeePass، واستعادة قاعدة بيانات مسروقة | [فتح الملف](rooms/20-extracted/README.md) |
 | 21 | [Cache Me Outside](https://tryhackme.com/room/cachemeoutside) | OSINT وربط الهوية والبيانات العامة والقرائن الجغرافية | [فتح الملف](rooms/21-cache-me-outside/README.md) |
 | 22 | [Digital Footprint](https://tryhackme.com/room/osintchallengeiv) | EXIF وWARC والبحث العكسي وبيانات المستندات | [فتح الملف](rooms/22-digital-footprint/README.md) |
+| 23 | [CupidBot](https://tryhackme.com/room/lafb2026e6) | Web وprompt injection واستخراج أسرار وكيل AI | [فتح الملف](rooms/23-cupidbot/README.md) |
 
 ## بنية كل غرفة
 
