@@ -8,7 +8,7 @@
 
 | المؤشر | الحالة |
 |---|---|
-| الغرف الموثقة | **28 غرفة** |
+| الغرف الموثقة | **29 غرفة** |
 | حالة الإجابات | **متحققة رسمياً داخل TryHackMe** |
 | ملفات الغرف | **ملف واحد لكل غرفة** |
 | التقييمات | لا يتم إرسالها ضمن سير العمل |
@@ -39,7 +39,7 @@
 | 09 | [Cloud Security Pitfalls](https://tryhackme.com/room/cloudsecuritypitfalls) | مخاطر حماية البيئات السحابية والهجرة | [فتح الملف](rooms/09-cloud-security-pitfalls/README.md) |
 | 10 | [Threat Hunting: Introduction](https://tryhackme.com/room/threathuntingintroduction) | الصيد المبني على الفرضيات وتحسين الاكتشاف | [فتح الملف](rooms/10-threat-hunting-introduction/README.md) |
 
-### 11–28 | استخبارات التهديدات، الويب، والاستجابة للحوادث
+### 11–29 | استخبارات التهديدات، الويب، والاستجابة للحوادث
 
 | # | الغرفة | المحور | التوثيق |
 |---:|---|---|---|
@@ -61,6 +61,7 @@
 | 26 | [Hidden Deep Into my Heart](https://tryhackme.com/room/lafb2026e9) | Web enumeration واكتشاف أسرار robots.txt والمسار الإداري | [فتح الملف](rooms/26-hidden-deep-into-my-heart/README.md) |
 | 27 | [TryHeartMe](https://tryhackme.com/room/lafb2026e5) | JWT tampering وتجاوز التفويض وشراء العنصر المخفي | [فتح الملف](rooms/27-tryheartme/README.md) |
 | 28 | [Speed Chatting](https://tryhackme.com/room/lafb2026e4) | Unrestricted file upload وPython reverse shell وRCE | [فتح الملف](rooms/28-speed-chatting/README.md) |
+| 29 | [Cupid's Matchmaker](https://tryhackme.com/room/lafb2026e3) | Stored XSS وHeadlessChrome واستخراج cookie المراجع | [فتح الملف](rooms/29-cupids-matchmaker/README.md) |
 
 ## بنية كل غرفة
 
