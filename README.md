@@ -8,7 +8,7 @@
 
 | المؤشر | الحالة |
 |---|---|
-| الغرف الموثقة | **26 غرفة** |
+| الغرف الموثقة | **27 غرفة** |
 | حالة الإجابات | **متحققة رسمياً داخل TryHackMe** |
 | ملفات الغرف | **ملف واحد لكل غرفة** |
 | التقييمات | لا يتم إرسالها ضمن سير العمل |
@@ -39,7 +39,7 @@
 | 09 | [Cloud Security Pitfalls](https://tryhackme.com/room/cloudsecuritypitfalls) | مخاطر حماية البيئات السحابية والهجرة | [فتح الملف](rooms/09-cloud-security-pitfalls/README.md) |
 | 10 | [Threat Hunting: Introduction](https://tryhackme.com/room/threathuntingintroduction) | الصيد المبني على الفرضيات وتحسين الاكتشاف | [فتح الملف](rooms/10-threat-hunting-introduction/README.md) |
 
-### 11–26 | استخبارات التهديدات، الويب، والاستجابة للحوادث
+### 11–27 | استخبارات التهديدات، الويب، والاستجابة للحوادث
 
 | # | الغرفة | المحور | التوثيق |
 |---:|---|---|---|
@@ -59,6 +59,7 @@
 | 24 | [Water Bottle](https://tryhackme.com/room/waterbottle) | OSINT وتعقب محطة مياه تاريخية من قرائن الموقع والاتصال | [فتح الملف](rooms/24-water-bottle/README.md) |
 | 25 | [Missing Person](https://tryhackme.com/room/missingperson) | OSINT وتحليل الصور وربط الفعالية بالمطعم والـDJ والكهف | [فتح الملف](rooms/25-missing-person/README.md) |
 | 26 | [Hidden Deep Into my Heart](https://tryhackme.com/room/lafb2026e9) | Web enumeration واكتشاف أسرار robots.txt والمسار الإداري | [فتح الملف](rooms/26-hidden-deep-into-my-heart/README.md) |
+| 27 | [TryHeartMe](https://tryhackme.com/room/lafb2026e5) | JWT tampering وتجاوز التفويض وشراء العنصر المخفي | [فتح الملف](rooms/27-tryheartme/README.md) |
 
 ## بنية كل غرفة
 
